@@ -1,0 +1,83 @@
+# Maven specific files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+!src/main/resources/
+!src/test/resources/
+
+# Eclipse specific files
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+
+# IDEA specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+*.class
+
+# NetBeans specific files
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+
+# Windows specific files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific files
+*~
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs and temporary files
+*.log
+*.log.*
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# Ignore compiled class files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore package manager files
+node_modules/
+dist/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore IDE plugins and config
+.vscode/
+.gradle/
+.idea/
