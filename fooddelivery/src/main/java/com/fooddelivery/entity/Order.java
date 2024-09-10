@@ -22,4 +22,6 @@ public class Order {
     private String items;
     @ManyToOne
     private Chef assignedChef;
+    @ManyToOne
+    private DeliveryDriver assignedDriver;
 }
