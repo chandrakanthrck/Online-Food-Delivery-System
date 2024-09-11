@@ -24,6 +24,7 @@ public class ChefController {
     }
 
     // Asynchronously assign a chef to an order
+    //Assigning an available chef for the order
     @PutMapping("/assign/{chefId}/toOrder/{orderId}")
     public CompletableFuture<ResponseEntity<Order>> assignChefToOrder(@PathVariable Long chefId, @PathVariable Long orderId) {
         return chefService.assignChefToOrderAsync(chefId, orderId)
@@ -32,6 +33,8 @@ public class ChefController {
     }
 
     // Asynchronously complete the order
+    //once each chef finishes his task, he will be in the queue
+    //for taking the next order
     @PutMapping("/completeOrder/{orderId}")
     public CompletableFuture<ResponseEntity<Order>> completeOrder(@PathVariable Long orderId) {
         return chefService.completeOrderAsync(orderId)

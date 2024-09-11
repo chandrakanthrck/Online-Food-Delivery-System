@@ -32,6 +32,7 @@ public class DeliveryDriverController {
     }
 
     // Asynchronously assign a driver to an order
+    //Whenever there is an order assign it to the available driver, process will be async
     @PutMapping("/assign/{driverId}/toOrder/{orderId}")
     public CompletableFuture<ResponseEntity<Order>> assignDriverToOrder(@PathVariable Long driverId, @PathVariable Long orderId) {
         return deliveryDriverService.assignDriverToOrderAsync(driverId, orderId)
@@ -40,6 +41,8 @@ public class DeliveryDriverController {
     }
 
     // Asynchronously complete the delivery
+    //drivers complete the order and go back to available state without
+    //waiting for other drivers
     @PutMapping("/completeDelivery/{orderId}")
     public CompletableFuture<ResponseEntity<Order>> completeDelivery(@PathVariable Long orderId) {
         return deliveryDriverService.completeDeliveryAsync(orderId)
